@@ -21,7 +21,6 @@ public class UsersController {
     private UsersService usersServiceImpl;
     @RequestMapping("/addUser")
     public String addUser(Users users){
-        System.out.println(users.getUsername()+" "+users.getUserage());
         this.usersServiceImpl.insertUser(users);
         return "ok";
     }
